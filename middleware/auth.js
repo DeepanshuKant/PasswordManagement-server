@@ -4,7 +4,8 @@ const ErrorHandler = require('../utils/errorHandler')
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 
-dotenv.config({ path: '../config/config.env' });
+// dotenv.config({ path: '../config/config.env' });
+dotenv.config({ path: '../config.env' });
 
 exports.isAuthenticatedUser = catchAsyncError(
     async (req, res, next) => {

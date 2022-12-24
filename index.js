@@ -18,7 +18,7 @@ app.use(cors({ origin: true, credentials: true, exposedHeaders: ["set-cookie"] }
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-dotenv.config({ path: './config/config.env' });
+dotenv.config({ path: './config.env' });
 
 //Handling Uncaught Errors
 process.on("uncaughtException", (err) => {
