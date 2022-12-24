@@ -30,6 +30,7 @@ process.on("uncaughtException", (err) => {
 
 //MongoDB Connection
 const MongoDb = process.env.MONGO_URL;
+mongoose.set('strictQuery', false);
 mongoose.connect(MongoDb, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("MongoDb Connect Successfully"))
     .catch(() => console.log("MongoDb Connect Failed"));
